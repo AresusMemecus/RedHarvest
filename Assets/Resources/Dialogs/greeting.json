@@ -1,0 +1,15 @@
+{
+  "dialogueId": "greeting",
+  "lines": [
+    {
+      "speaker": "Сосиска",
+      "text": "бибп боп",
+      "spriteName": "sosiska1"
+    },
+    {
+      "speaker": "Сосиска",
+      "text": "бипо боп зап",
+      "spriteName": "sosiska1"
+    }
+  ]
+}

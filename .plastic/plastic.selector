@@ -1,0 +1,4 @@
+repository "RedHarvestGame@Kazuk@cloud"
+  path "/"
+    br "/main"
+    co "/main"
