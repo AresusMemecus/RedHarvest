@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Явно указать LF для файлов Unity
+*.cs       text eol=lf
+*.meta     text eol=lf
+*.prefab   text eol=lf
+*.unity    text eol=lf
+*.shader   text eol=lf
+*.mat      text eol=lf

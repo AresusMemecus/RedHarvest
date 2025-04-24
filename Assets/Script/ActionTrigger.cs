@@ -14,6 +14,9 @@ public class ActionTrigger : MonoBehaviour
 
     void Update()
     {
+        // Очищаем список от уничтоженных объектов
+        interactablesInRange.RemoveAll(col => col == null);
+
         if (interactablesInRange.Count > 0)
         {
             UpdateClosestInteractable();
@@ -33,40 +36,19 @@ public class ActionTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out IInteractable interactable))
+        if (other != null && other.TryGetComponent(out IInteractable interactable))
         {
             interactablesInRange.Add(other);
-
         }
     }
 
-void OnTriggerExit(Collider other)
-{
-    if (interactablesInRange.Contains(other))
+    void OnTriggerExit(Collider other)
     {
-        interactablesInRange.Remove(other);
-
-        // Если вышли из объекта, который был ближайшим
-        if (other == closestCollider)
+        if (other != null && interactablesInRange.Contains(other))
         {
-            if (previousMaterial != null)
-            {
-                Renderer renderer = other.GetComponent<Renderer>();
-                if (renderer != null)
-                {
-                    renderer.material = previousMaterial;
-                }
-            }
-
-            previousClosestCollider = null;
-            closestCollider = null;
-            previousMaterial = null;
-            currentInteractable = null;
-            isPlayerInRange = false;
+            interactablesInRange.Remove(other);
         }
     }
-}
-
 
     void UpdateClosestInteractable()
     {
@@ -75,6 +57,8 @@ void OnTriggerExit(Collider other)
 
         foreach (var col in interactablesInRange)
         {
+            if (col == null) continue;
+
             float distance = Vector3.Distance(transform.position, col.transform.position);
             if (distance < closestDistance)
             {
@@ -89,7 +73,11 @@ void OnTriggerExit(Collider other)
             // Вернуть старому объекту его оригинальный материал
             if (previousClosestCollider != null && previousMaterial != null)
             {
-                previousClosestCollider.GetComponent<Renderer>().material = previousMaterial;
+                var renderer = previousClosestCollider.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material = previousMaterial;
+                }
             }
 
             // Сохранить текущий материал нового объекта
@@ -110,9 +98,12 @@ void OnTriggerExit(Collider other)
             {
                 currentInteractable = interactable;
                 isPlayerInRange = true;
-                Debug.Log($"Ближайший интеракт обновлён: {closestCollider.name}");
+            }
+            else
+            {
+                currentInteractable = null;
+                isPlayerInRange = false;
             }
         }
     }
-
 }

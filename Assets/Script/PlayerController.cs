@@ -15,18 +15,27 @@ public class PlayerController : MonoBehaviour
     public Sprite frontSprite;
     public Sprite backSprite;
     public Sprite frontSideSprite;
-    public Sprite sideSprite;
     public Sprite backSideSprite;
     public Transform shadowTransform;
     public float minShadowScale = 0.4f;   // Минимальный размер тени (в прыжке)
     public float maxShadowScale = 1f; 
     private DialogueManager dialogueManager;
+    [SerializeField] private InventoryUI inventoryUI;
 
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         dialogueManager = FindFirstObjectByType<DialogueManager>();
+        
+        if (inventoryUI == null)
+        {
+            inventoryUI = FindFirstObjectByType<InventoryUI>();
+            if (inventoryUI == null)
+            {
+                Debug.LogWarning("InventoryUI component not found! Please assign it in the inspector or make sure it exists in the scene.");
+            }
+        }
     }
 
     void Update()
@@ -47,12 +56,7 @@ public class PlayerController : MonoBehaviour
         // --- ОБНОВЛЯЕМ СПРАЙТ ---
         if (moveInput.magnitude > 0.1f)
         {
-            if (Mathf.Abs(moveInput.x) > 0.1f && Mathf.Abs(moveInput.y) <= 0.1f) // Чисто вбок
-            {
-                spriteRenderer.sprite = sideSprite;
-                spriteRenderer.flipX = moveInput.x < 0f ? false : true;
-            }
-            else if (moveInput.y > 0.1f) // Движение вперёд (назад в камеру)
+            if (moveInput.y > 0.1f) // Движение вперёд (назад в камеру)
             {
                 if (moveInput.x > 0.1f) // Вперёд + вправо
                 {
@@ -65,7 +69,7 @@ public class PlayerController : MonoBehaviour
                     spriteRenderer.flipX = false;
                 }
                 else // Чисто вперёд
-                {
+                { 
                     spriteRenderer.sprite = backSprite;
                     spriteRenderer.flipX = false;
                 }
@@ -76,7 +80,7 @@ public class PlayerController : MonoBehaviour
                 {
                     spriteRenderer.sprite = frontSideSprite;
                     spriteRenderer.flipX = true;
-                }
+                }   
                 else if (moveInput.x < -0.1f) // Назад + влево
                 {
                     spriteRenderer.sprite = frontSideSprite;
@@ -89,7 +93,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
 
         
         if (shadowTransform != null)
@@ -135,4 +138,11 @@ public class PlayerController : MonoBehaviour
         moveInput = Vector2.zero; // Очищаем ввод движения
     }
 
+    public void OnInventory(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            inventoryUI?.ToggleInventory();
+        }
+    }
 }
