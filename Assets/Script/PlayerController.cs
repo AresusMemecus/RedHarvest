@@ -25,8 +25,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("PlayerController Start method called");
+        Time.timeScale = 1;
         controller = GetComponent<CharacterController>();
         dialogueManager = FindFirstObjectByType<DialogueManager>();
+        
+        // Reset movement input
+        moveInput = Vector2.zero;
         
         if (inventoryUI == null)
         {
@@ -39,8 +44,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {   
         // Изометрическое направление
         Vector3 forward = new Vector3(1, 0, 1).normalized;
         Vector3 right = new Vector3(1, 0, -1).normalized;
@@ -115,10 +119,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnMove(InputValue value)
+    public void OnMoved(InputValue value)
     {
-        if (dialogueManager.isDialogueActive) return;
+        Debug.Log("OnMove called"); // Логируем, вызывается ли метод
+        if (dialogueManager == null)
+        {
+            Debug.LogWarning("DialogueManager is null!");
+            moveInput = value.Get<Vector2>();
+            return;
+        }
+        
+        if (dialogueManager.isDialogueActive)
+        {
+            Debug.Log("Movement blocked by active dialogue");
+            return;
+        }
+
         moveInput = value.Get<Vector2>();
+        Debug.Log("MoveInput: " + moveInput);
     }
 
     public void OnJump(InputValue value)
