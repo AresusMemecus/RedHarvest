@@ -6,7 +6,10 @@ public class DialogueLine
 {
     public string speaker; // Кто говорит
     public string text;    // Что говорит
-    public string spriteName; // Имя спрайта (путь в папке Resources)
+    public string spriteNameForFirstPerson; // Имя спрайта (путь в папке Resources)
+    public string spriteNameForSecondPerson;
+    public double spriteDarknessForFirstPerson; // Имя спрайта (путь в папке Resources)
+    public double spriteDarknessForSecondPerson;
 }
 
 [Serializable] 

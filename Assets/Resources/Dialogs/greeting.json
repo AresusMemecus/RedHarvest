@@ -2,14 +2,98 @@
   "dialogueId": "greeting",
   "lines": [
     {
-      "speaker": "Сосиска",
-      "text": "бибп боп",
-      "spriteName": "sosiska"
+      "speaker": "Первый чел",
+      "text": "Вот это прикол ебать ты хуйлан",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 1,
+      "spriteDarknessForSecondPerson": 0.5
     },
     {
-      "speaker": "Сосиска",
-      "text": "бипо боп зап",
-      "spriteName": "sosiska"
+      "speaker": "Второй чел",
+      "text": "Кто? Я хуйлан?",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 0.5,
+      "spriteDarknessForSecondPerson": 1
+    },
+    {
+      "speaker": "Первый чел",
+      "text": "Да ты",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 1,
+      "spriteDarknessForSecondPerson": 0.5
+    },
+    {
+      "speaker": "Второй чел",
+      "text": "А может быть...",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 0.5,
+      "spriteDarknessForSecondPerson": 1
+    },
+    {
+      "speaker": "Второй чел",
+      "text": "Ты дурак?",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 0.5,
+      "spriteDarknessForSecondPerson": 1
+    },
+    {
+      "speaker": "Первый чел",
+      "text": "Я хуйлан?",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 1,
+      "spriteDarknessForSecondPerson": 0.5
+    },
+    {
+      "speaker": "Второй чел",
+      "text": "Да",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 0.5,
+      "spriteDarknessForSecondPerson": 1
+    },
+    {
+      "speaker": "Первый чел",
+      "text": "Ебать ты шо, дуржочек",
+      "spriteNameForFirstPerson": "Persons/ChelOne",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 1,
+      "spriteDarknessForSecondPerson": 0.5
+    },
+    {
+      "speaker": "Чел без члена",
+      "text": "Кто я блять",
+      "spriteNameForFirstPerson": "Persons/Chane",
+      "spriteNameForSecondPerson": "Persons/ChelTwo",
+      "spriteDarknessForFirstPerson": 1,
+      "spriteDarknessForSecondPerson": 0.5
+    },
+    {
+      "speaker": "Чел без члена 2",
+      "text": "я это ты",
+      "spriteNameForFirstPerson": "Persons/Chane",
+      "spriteNameForSecondPerson": "Persons/Chane",
+      "spriteDarknessForFirstPerson": 0.5,
+      "spriteDarknessForSecondPerson": 1
+    },
+    {
+      "speaker": "Чел без члена",
+      "text": "а ебать, тогда понятно",
+      "spriteNameForFirstPerson": "Persons/Chane",
+      "spriteNameForSecondPerson": "Persons/Chane",
+      "spriteDarknessForFirstPerson": 1,
+      "spriteDarknessForSecondPerson": 0.5
+    },
+    {
+      "speaker": "Чел без члена",
+      "text": "блять",
+      "spriteNameForFirstPerson": "Persons/Chane",
+      "spriteDarknessForFirstPerson": 1
     }
   ]
 }

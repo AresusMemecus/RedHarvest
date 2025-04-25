@@ -9,18 +9,19 @@ public class GameMenu : MonoBehaviour
         menuPanel.SetActive(true);
         Time.timeScale = 0f;
     }
+
     public void OnClickPlayButton(){
         menuPanel.SetActive(false);
         Time.timeScale = 1f;
     }
+
     public void OnClickExitButton(){
         Time.timeScale = 1f;
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("CoreScene");
-        
     }
+
     public void OnClickExitSettingsMenuButton(){
 
     }   
-
 }

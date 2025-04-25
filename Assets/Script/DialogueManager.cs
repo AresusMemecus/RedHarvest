@@ -8,7 +8,10 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI speakerText; // Имя говорящего
     public TextMeshProUGUI dialogueText; // Текст фразы
     public GameObject dialogueUI; // Весь UI диалога (панель)
-    public Image speakerImage; // Изображение говорящего
+    public Image speakerImageForFirstPerson; // Изображение говорящего
+    public Image speakerImageForSecondPerson; // Изображение говорящего
+    double spriteDarknessForFirstPerson;
+    double spriteDarknessForSecondPerson;
 
     private Dialogue currentDialogue;
     private int currentLineIndex;
@@ -59,7 +62,6 @@ public class DialogueManager : MonoBehaviour
         ShowLine(); 
     }
 
-    // Показ текущей строки
     public void ShowLine()
     {
         if (currentLineIndex < currentDialogue.lines.Length)
@@ -67,17 +69,37 @@ public class DialogueManager : MonoBehaviour
             DialogueLine line = currentDialogue.lines[currentLineIndex];
             speakerText.text = line.speaker;
             dialogueText.text = line.text;
+            spriteDarknessForFirstPerson = line.spriteDarknessForFirstPerson;
+            spriteDarknessForSecondPerson = line.spriteDarknessForSecondPerson;
 
-            // Загружаем спрайт из папки Resources/Sprites/
-            Sprite sprite = Resources.Load<Sprite>($"Sprites/{line.spriteName}");
-            if (sprite != null)
+            // Загружаем спрайты
+            Sprite firstPerson = Resources.Load<Sprite>($"Sprites/{line.spriteNameForFirstPerson}");
+            Sprite secondPerson = null;
+
+            // Проверяем, если имя спрайта для второго персонажа не пустое или null
+            if (!string.IsNullOrEmpty(line.spriteNameForSecondPerson))
             {
-                speakerImage.sprite = sprite;
+                secondPerson = Resources.Load<Sprite>($"Sprites/{line.spriteNameForSecondPerson}");
+            }
+
+            // Устанавливаем спрайт для первого персонажа
+            speakerImageForFirstPerson.sprite = firstPerson;
+            ApplyDarkness(speakerImageForFirstPerson, spriteDarknessForFirstPerson);
+
+            // Применяем затемнение для второго персонажа
+            if (secondPerson != null)
+            {
+                speakerImageForSecondPerson.sprite = secondPerson;
+                speakerImageForSecondPerson.gameObject.SetActive(true); // Показываем второй спрайт, если он есть
+                ApplyDarkness(speakerImageForSecondPerson, spriteDarknessForSecondPerson);
             }
             else
             {
-                Debug.LogError($"Не удалось загрузить спрайт: {line.spriteName}");
+                speakerImageForSecondPerson.gameObject.SetActive(false); // Скрываем второй спрайт, если его нет
             }
+
+            // Поворот первого персонажа (если нужно)
+            speakerImageForFirstPerson.rectTransform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
@@ -85,6 +107,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void ApplyDarkness(Image image, double darkness)
+    {
+        float value = Mathf.Clamp01((float)darkness);
+        image.color = new Color(value, value, value, 1f); // RGB затемнение, прозрачность не трогаем
+    }
 
     // Перейти к следующей строке
     private void NextLine()
