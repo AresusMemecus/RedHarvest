@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Sosiska1 : MonoBehaviour, IInteractable
+public class Sosiska1 : SelectableBase, IInteractable
 {
     public void Interact()
     {

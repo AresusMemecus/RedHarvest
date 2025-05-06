@@ -80,17 +80,6 @@ public class ActionTrigger : MonoBehaviour
                 }
             }
 
-            // Сохранить текущий материал нового объекта
-            if (newClosest != null)
-            {
-                Renderer renderer = newClosest.GetComponent<Renderer>();
-                if (renderer != null)
-                {
-                    previousMaterial = renderer.material;
-                    renderer.material = outlineMaterial;
-                }
-            }
-
             previousClosestCollider = newClosest;
             closestCollider = newClosest;
 

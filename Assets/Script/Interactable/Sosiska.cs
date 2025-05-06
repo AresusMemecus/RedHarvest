@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
-public class Sosiska : MonoBehaviour, IInteractable
+public class Sosiska : SelectableBase, IInteractable
 {
     [SerializeField] private string spritePath = "Sprites/Sosiska"; // Путь к спрайту в папке Resources
     private Item item;

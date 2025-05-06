@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Cheese : MonoBehaviour, IInteractable
+public class Cheese : SelectableBase, IInteractable
 {
     [SerializeField] private string spritePath = "Sprites/Cheese"; // Путь к спрайту в папке Resources
     private Item item;

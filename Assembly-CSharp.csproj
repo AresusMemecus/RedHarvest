@@ -69,10 +69,13 @@
     <Compile Include="Assets\Script\Inventory\Inventory.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Script\StartGameButton.cs" />
+    <Compile Include="Assets\Script\CameraMoveOnHover.cs" />
     <Compile Include="Assets\Script\Menu\GameMenu.cs" />
     <Compile Include="Assets\Script\Menu\MainMenuManager.cs" />
+    <Compile Include="Assets\Script\SelectionManager.cs" />
     <Compile Include="Assets\Script\ActionTrigger.cs" />
     <Compile Include="Assets\Script\Inventory\Item.cs" />
+    <Compile Include="Assets\Script\Interactable\Door.cs" />
     <Compile Include="Assets\Script\DialogueManager.cs" />
     <Compile Include="Assets\Script\Interactable\Sosiska1.cs" />
     <Compile Include="Assets\Script\DialogueLine.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\IInteractable.cs" />
     <Compile Include="Assets\Script\Interactable\Cheese.cs" />
+    <Compile Include="Assets\Script\SelectableBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
