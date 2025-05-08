@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public Sprite backSideSprite;
     private DialogueManager dialogueManager;
     [SerializeField] private InventoryUI inventoryUI;
+    Animator animator;
 
 
     void Start()
@@ -26,8 +27,9 @@ public class PlayerController : MonoBehaviour
         Debug.Log("PlayerController Start method called");
         Time.timeScale = 1;
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         dialogueManager = FindFirstObjectByType<DialogueManager>();
-        
+
         // Reset movement input
         moveInput = Vector2.zero;
         
@@ -47,6 +49,9 @@ public class PlayerController : MonoBehaviour
         Vector3 forward = new Vector3(1, 0, 1).normalized;
         Vector3 right = new Vector3(1, 0, -1).normalized;
         Vector3 movement = (forward * moveInput.y + right * moveInput.x) * moveSpeed;
+
+        animator.SetFloat("InputX", moveInput.x);
+        animator.SetFloat("InputY", moveInput.y);
 
         // --- ПРИМЕНЯЕМ ГРАВИТАЦИЮ И ДВИЖЕНИЕ ---
         if (controller.isGrounded && velocity.y < 0)
@@ -104,8 +109,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-
+        Debug.Log(moveInput.x + " " + moveInput.y);
     }
 
     public void OnMove(InputValue value)
