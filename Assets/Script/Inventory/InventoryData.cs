@@ -15,6 +15,7 @@ public class InventoryData
         public bool isStackable;
         public int maxStackSize;
         public int currentStackSize;
+        public int itemCount;
         public Item.ItemType itemType;
 
         public ItemData(Item item)
@@ -25,12 +26,13 @@ public class InventoryData
             isStackable = item.isStackable;
             maxStackSize = item.maxStackSize;
             currentStackSize = item.currentStackSize;
+            itemCount = item.itemCount;
             itemType = item.itemType;
         }
 
         public Item ToItem()
         {
-            Item item = new Item(itemName, description, iconPath, isStackable, maxStackSize, itemType);
+            Item item = new Item(itemName, description, iconPath, isStackable, maxStackSize, itemCount, itemType);
             item.currentStackSize = currentStackSize;
             return item;
         }

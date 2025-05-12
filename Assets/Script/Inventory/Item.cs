@@ -11,6 +11,7 @@ public class Item
     public bool isStackable;
     public int maxStackSize = 1;
     public int currentStackSize = 1;
+    public int itemCount = 1;
     public ItemType itemType;
 
     public enum ItemType
@@ -22,7 +23,7 @@ public class Item
         Material
     }
 
-    public Item(string name, string desc, string iconPath = "", bool stackable = false, int maxStack = 1, ItemType type = ItemType.Consumable)
+    public Item(string name, string desc, string iconPath = "", bool stackable = false, int maxStack = 1, int itemsCount = 1, ItemType type = ItemType.Consumable)
     {
         itemName = name;
         description = desc;
@@ -33,6 +34,7 @@ public class Item
         }
         isStackable = stackable;
         maxStackSize = maxStack;
+        itemCount = itemsCount;
         itemType = type;
     }
 

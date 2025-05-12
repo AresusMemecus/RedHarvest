@@ -8,7 +8,7 @@ public class Cheese : SelectableBase, IInteractable
     private void Awake()
     {
         // Создаем предмет с путем к иконке
-        item = new Item("Сыр", "Кусок вкусного сыра", spritePath, true, 5, Item.ItemType.Consumable);
+        item = new Item("Сыр", "Кусок вкусного сыра", spritePath, true, 5, 1, Item.ItemType.Consumable);
     }
     
     public void Interact()

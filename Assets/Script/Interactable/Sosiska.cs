@@ -10,7 +10,7 @@ public class Sosiska : SelectableBase, IInteractable
     private void Awake()
     {
         // Создаем предмет с путем к иконке
-        item = new Item("sosiska", "Вкусная сосиска", spritePath, true, 10, Item.ItemType.Consumable);
+        item = new Item("sosiska", "Вкусная сосиска", spritePath, true, 10, 1, Item.ItemType.Consumable);
     }
     
     public void Interact()

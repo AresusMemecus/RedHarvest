@@ -3,38 +3,60 @@ using UnityEngine;
 public abstract class SelectableBase : MonoBehaviour
 {
     private Material originalMaterial;
-    [SerializeField] private Material OutlinedSprite;
+    [SerializeField] private Material Outlined;
+
+    private bool meshRendererAdded = false; // Флаг, добавили ли MeshRenderer вручную
 
     public virtual void OnHoverEnter()
     {
         Debug.Log($"[{gameObject.name}] Наведен курсор (по умолчанию)");
-        var spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if (spriteRenderer != null && OutlinedSprite != null)
+        var spriteRenderer = GetComponent<SpriteRenderer>();
+        var meshRenderer = GetComponent<MeshRenderer>();
+
+        if (spriteRenderer != null && Outlined != null)
         {
-            // Сохраняем оригинальный материал перед изменением
             originalMaterial = spriteRenderer.material;
-            // Применяем новый материал с контуром
-            spriteRenderer.material = OutlinedSprite;
+            spriteRenderer.material = Outlined;
+        }
+        else if (meshRenderer != null && Outlined != null)
+        {
+            originalMaterial = meshRenderer.material;
+            meshRenderer.materials = new Material[] { originalMaterial, Outlined };
         }
         else
         {
-            Debug.LogWarning($"[{gameObject.name}] Нет SpriteRenderer или outlineMaterial!");
+            // Если нет ни SpriteRenderer, ни MeshRenderer — добавляем MeshRenderer вручную
+            meshRenderer = gameObject.AddComponent<MeshRenderer>();
+            meshRendererAdded = true;
+            originalMaterial = null; // так как его не было
+            meshRenderer.material = Outlined;
+
+            Debug.Log($"[{gameObject.name}] Добавлен временный MeshRenderer.");
         }
     }
+
     public virtual void OnHoverExit()
     {
         Debug.Log($"[{gameObject.name}] Курсор ушёл (по умолчанию)");
+
         var spriteRenderer = GetComponent<SpriteRenderer>();
+        var meshRenderer = GetComponent<MeshRenderer>();
 
         if (spriteRenderer != null && originalMaterial != null)
         {
-            // Восстанавливаем оригинальный материал
             spriteRenderer.material = originalMaterial;
         }
-        else
+        else if (meshRenderer != null && originalMaterial != null && !meshRendererAdded)
         {
-            Debug.LogWarning($"[{gameObject.name}] Нет SpriteRenderer или оригинального материала!");
+            meshRenderer.materials = new Material[] { originalMaterial };
+        }
+
+        if (meshRendererAdded && meshRenderer != null)
+        {
+            Destroy(meshRenderer);
+            meshRendererAdded = false;
+            Debug.Log($"[{gameObject.name}] Удалён временный MeshRenderer.");
         }
     }
 

@@ -38,6 +38,11 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    public void OnClickCloseInventoryButton(){
+        ToggleInventory();
+        Debug.Log("fdf");
+    }
+
     public void ToggleInventory()
     {
         if (inventoryPanel == null) return;
