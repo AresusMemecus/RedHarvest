@@ -59,32 +59,34 @@
     <UnityVersion>6000.0.43f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\Aresus\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\AresusMemecus\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Interactable\Sosiska.cs" />
     <Compile Include="Assets\Script\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Script\Сutscenes.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryUI.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Box.cs" />
     <Compile Include="Assets\Script\StartGameButton.cs" />
     <Compile Include="Assets\Script\CameraMoveOnHover.cs" />
     <Compile Include="Assets\Script\Menu\GameMenu.cs" />
+    <Compile Include="Assets\Script\Dialogue\DialogueLine.cs" />
+    <Compile Include="Assets\Script\Interactable\SelectableBase.cs" />
+    <Compile Include="Assets\Script\Interactable\IInteractable.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Ticket.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Door.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Cloth.cs" />
     <Compile Include="Assets\Script\Menu\MainMenuManager.cs" />
-    <Compile Include="Assets\Script\SelectionManager.cs" />
-    <Compile Include="Assets\Script\ActionTrigger.cs" />
     <Compile Include="Assets\Script\Inventory\Item.cs" />
-    <Compile Include="Assets\Script\Interactable\Door.cs" />
-    <Compile Include="Assets\Script\DialogueManager.cs" />
-    <Compile Include="Assets\Script\Interactable\Sosiska1.cs" />
-    <Compile Include="Assets\Script\DialogueLine.cs" />
+    <Compile Include="Assets\Script\Interactable\ReplicaLoader.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryData.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
-    <Compile Include="Assets\Script\IInteractable.cs" />
-    <Compile Include="Assets\Script\Interactable\Cheese.cs" />
-    <Compile Include="Assets\Script\SelectableBase.cs" />
-    <Compile Include="Assets\Script\Interactable\Box.cs" />
+    <Compile Include="Assets\Script\Dialogue\DialogueManager.cs" />
+    <Compile Include="Assets\Script\Interactable\ReplicaData.cs" />
+    <Compile Include="Assets\Script\Interactable\SelectionManager.cs" />
+    <Compile Include="Assets\Script\Interactable\ActionTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

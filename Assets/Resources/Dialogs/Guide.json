@@ -1,0 +1,24 @@
+{
+    "dialogueId": "Guide",
+    "lines": [
+      {
+        "speaker": "Шен кошечка",
+        "text": "Вот это я хуйнулась",
+        "spriteNameForFirstPerson": "Persons/Chane",
+        "spriteDarknessForFirstPerson": 1
+      },
+      {
+        "speaker": "Шен кошечка",
+        "text": "Надо придти в себя...",
+        "spriteNameForFirstPerson": "Persons/Chane",
+        "spriteDarknessForFirstPerson": 1
+      },
+      {
+        "speaker": "Шен кошечка",
+        "text": "А ещё одеться!",
+        "spriteNameForFirstPerson": "Persons/Chane",
+        "spriteDarknessForFirstPerson": 1
+      }
+    ]
+  }
+  

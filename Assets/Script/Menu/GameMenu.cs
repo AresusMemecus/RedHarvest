@@ -21,6 +21,10 @@ public class GameMenu : MonoBehaviour
         SceneManager.LoadScene("CoreScene");
     }
 
+    public void OnClickSettingsMenuButton(){
+
+    }   
+
     public void OnClickExitSettingsMenuButton(){
 
     }   
