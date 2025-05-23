@@ -2,12 +2,15 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using UnityEngine.UIElements;
 
 public class Door : SelectableBase, IInteractable
 {
     public bool isActivated = false;
-
-    public void Interact(){}
+    public Vector3 Teleport;
+    
+    public void Interact() { }
 
     public override void OnSelect()
     {
@@ -35,9 +38,12 @@ public class Door : SelectableBase, IInteractable
 
     public override void OnReplicaComplete()
     {
+        CharacterController character = Charachter.GetComponent<CharacterController>();
         if (isActivated)
         {
-            SceneManager.LoadScene("CoreScene");
+            character.enabled = false;
+            Charachter.transform.position = Teleport;
+            character.enabled = true;
         }
     }
 }

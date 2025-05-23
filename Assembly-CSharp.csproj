@@ -59,7 +59,7 @@
     <UnityVersion>6000.0.43f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\AresusMemecus\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\Aresus\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -79,13 +79,16 @@
     <Compile Include="Assets\Script\Interactable\obj\Door.cs" />
     <Compile Include="Assets\Script\Interactable\obj\Cloth.cs" />
     <Compile Include="Assets\Script\Menu\MainMenuManager.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Capsula.cs" />
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Interactable\ReplicaLoader.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryData.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Script\Interactable\ReplicaData.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Сloset.cs" />
     <Compile Include="Assets\Script\Interactable\SelectionManager.cs" />
+    <Compile Include="Assets\Script\Interactable\obj\Object.cs" />
     <Compile Include="Assets\Script\Interactable\ActionTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
