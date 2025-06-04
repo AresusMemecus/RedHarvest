@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Floor
-  - Sosiska
-  - Sosiska2
-  - Cheese
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,7 +12,7 @@ TagManager:
   - Water
   - UI
   - IgnorOnHover
-  - 
+  - Wall
   - 
   - 
   - 

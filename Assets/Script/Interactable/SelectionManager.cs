@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class SelectionManager : MonoBehaviour
 {
     private SelectableBase lastHoveredSelectable;
-    public LayerMask ignoreLayer; 
+    public LayerMask ignoreLayers;
     public ActionTrigger actionTrigger;
 
     void Update()
@@ -16,7 +16,7 @@ public class SelectionManager : MonoBehaviour
         RaycastHit hit;
 
         // Выполняем рейкаст с фильтрацией по слоям
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayer))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayers.value))
         {
             SelectableBase selectable = hit.collider.GetComponent<SelectableBase>();
 
