@@ -125,6 +125,22 @@ public abstract class SelectableBase : MonoBehaviour
         StartCoroutine(UnfreezeAfterSeconds());
     }
 
+    public void Freez()
+    {
+        var characterController = Charachter.GetComponent<CharacterController>();
+        var playerController = Charachter.GetComponent<PlayerController>();
+        playerController.isFrozen = true;
+        characterController.enabled = false;
+    }
+
+        public void UnFreez()
+    {
+        var characterController = Charachter.GetComponent<CharacterController>();
+        var playerController = Charachter.GetComponent<PlayerController>();
+        playerController.isFrozen = false;
+        characterController.enabled = true;
+    }
+
     protected IEnumerator UnfreezeAfterSeconds()
     {
         for (int i = 1; i < ReplicaLines.Length; i++)

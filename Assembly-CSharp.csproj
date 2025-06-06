@@ -65,11 +65,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AOSFogWar\Shadowcaster.cs" />
     <Compile Include="Assets\Script\Inventory\Inventory.cs" />
     <Compile Include="Assets\Script\Сutscenes.cs" />
-    <Compile Include="Assets\AOSFogWar\csFogWar.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryUI.cs" />
+    <Compile Include="Assets\Script\FirstTerminal.cs" />
     <Compile Include="Assets\Script\Interactable\obj\Box.cs" />
     <Compile Include="Assets\Script\StartGameButton.cs" />
     <Compile Include="Assets\Script\CameraMoveOnHover.cs" />
@@ -81,14 +80,13 @@
     <Compile Include="Assets\Script\Interactable\obj\Door.cs" />
     <Compile Include="Assets\Script\Interactable\obj\Cloth.cs" />
     <Compile Include="Assets\Script\PlayerFog.cs" />
-    <Compile Include="Assets\AOSFogWar\Examples\csFogVisibilityAgent.cs" />
+    <Compile Include="Assets\Script\Menu\WindowMenu.cs" />
     <Compile Include="Assets\Script\Menu\MainMenuManager.cs" />
-    <Compile Include="Assets\AOSFogWar\Examples\csRevealerSpawner.cs" />
     <Compile Include="Assets\Script\Interactable\obj\Capsula.cs" />
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Interactable\ReplicaLoader.cs" />
+    <Compile Include="Assets\Script\EyesFollow.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryData.cs" />
-    <Compile Include="Assets\AOSFogWar\Demo\Scripts\csEyeController.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\Script\Interactable\ReplicaData.cs" />
@@ -111,14 +109,12 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\AOSFogWar\README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\AOSFogWar\Shaders\FogPlane.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
