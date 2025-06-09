@@ -73,6 +73,7 @@
     <Compile Include="Assets\Script\StartGameButton.cs" />
     <Compile Include="Assets\Script\CameraMoveOnHover.cs" />
     <Compile Include="Assets\Script\Menu\GameMenu.cs" />
+    <Compile Include="Assets\Script\ThirdTerminal.cs" />
     <Compile Include="Assets\Script\Dialogue\DialogueLine.cs" />
     <Compile Include="Assets\Script\Interactable\SelectableBase.cs" />
     <Compile Include="Assets\Script\Interactable\IInteractable.cs" />
@@ -86,6 +87,8 @@
     <Compile Include="Assets\Script\Inventory\Item.cs" />
     <Compile Include="Assets\Script\Interactable\ReplicaLoader.cs" />
     <Compile Include="Assets\Script\EyesFollow.cs" />
+    <Compile Include="Assets\Script\SecondTerminal.cs" />
+    <Compile Include="Assets\Script\FillInTheBlankQuestion.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryData.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Dialogue\DialogueManager.cs" />
