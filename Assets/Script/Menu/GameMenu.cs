@@ -1,31 +1,42 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-    [SerializeField]public GameObject menuPanel;
-    public void OnClickMenuButton(){
+    [SerializeField] public GameObject menuPanel;
+
+    public PlayerController playerController;
+    public ActionTrigger actionTrigger;
+
+    public void OnClickMenuButton()
+    {
         menuPanel.SetActive(true);
-        Time.timeScale = 0f;
+        playerController.enabled = false;
+        actionTrigger.enabled = false;
     }
 
-    public void OnClickPlayButton(){
+    public void OnClickPlayButton()
+    {
         menuPanel.SetActive(false);
-        Time.timeScale = 1f;
+        playerController.enabled = true;
+        actionTrigger.enabled = true;
     }
 
-    public void OnClickExitButton(){
-        Time.timeScale = 1f;
+    public void OnClickExitButton()
+    {
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("CoreScene");
     }
 
-    public void OnClickSettingsMenuButton(){
+    public void OnClickSettingsMenuButton()
+    {
 
-    }   
+    }
 
-    public void OnClickExitSettingsMenuButton(){
+    public void OnClickExitSettingsMenuButton()
+    {
 
-    }   
+    }
 }

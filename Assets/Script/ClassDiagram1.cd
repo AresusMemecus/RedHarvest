@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ActionTrigger">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CASAAgAAAAAAAAAAAAAEAgAAAAAACIAAQAAAAAAABAA=</HashCode>
+      <FileName>Assets\Script\Interactable\ActionTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Box" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAIAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Box.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CameraMoveOnHover">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAEiAAAAAAAAAAEAAAAAAAAACAAAAAECAgAAA=</HashCode>
+      <FileName>Assets\Script\CameraMoveOnHover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capsula" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Capsula.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Closet" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Сloset.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cloth" Collapsed="true">
+    <Position X="14.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAgAAAAAAAAAAIAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Cloth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataBase">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dialogue">
+    <Position X="22" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Dialogue\DialogueLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogueLine">
+    <Position X="23.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAQAEAAAAAIAAAAAAAACAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Dialogue\DialogueLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogueManager">
+    <Position X="16.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAQgCiAIAAAAACAEAAAEACAAAAAAIABBACAAAAA=</HashCode>
+      <FileName>Assets\Script\Dialogue\DialogueManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Door" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAgAAAIAAAAAAAAAAABAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Door.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EyeInsideContainer">
+    <Position X="18.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\EyesFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FillInTheBlankQuestion">
+    <Position X="20.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\FillInTheBlankQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstTerminal">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAEECAEAAAEAgAAgAAAAAAQQQAEAAgAAAQAEAA=</HashCode>
+      <FileName>Assets\Script\FirstTerminal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameMenu">
+    <Position X="23.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgARAAAAAAAAAEAAAAAAAAAACACAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Menu\GameMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory">
+    <Position X="16.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIgQEAAACAAAAAAgAAAAAiQAACgAFAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryData">
+    <Position X="18.5" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="InventoryData.ItemData">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\Inventory\InventoryData.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Inventory\InventoryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryUI">
+    <Position X="20.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAACCAgAgAABAAQEAACAAQIAAAQDEA=</HashCode>
+      <FileName>Assets\Script\Inventory\InventoryUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item">
+    <Position X="22" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Item.ItemType">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\Inventory\Item.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABAAAAABAABAAAAIAAAAAAAAAAEABAgAQAKAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Inventory\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenuManager">
+    <Position X="23.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAEAAIAAAAAAAAACAAAABAAAgAAAAA=</HashCode>
+      <FileName>Assets\Script\Menu\MainMenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Objectsmt" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAgAAAAAAAAAAIAAIAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Object.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="16.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAgAECAAAAEAAAAAIAJAAAAACQACAASAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerFog">
+    <Position X="18.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgQAAQAAAAAAgAAAAIAAIAAAAAAAAAAAAAQAAAgAAgA=</HashCode>
+      <FileName>Assets\Script\PlayerFog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReplicaData">
+    <Position X="20.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Script\Interactable\ReplicaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReplicaLoader">
+    <Position X="22" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Interactable\ReplicaLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondTerminal">
+    <Position X="23.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAEAEBEAgAAkAIAAAAAQQAAAAgAAAQAEAA=</HashCode>
+      <FileName>Assets\Script\SecondTerminal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectableBase" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQQAAEAgAAgAAAAAAwACAQARDgAAAAABACgAQMEI=</HashCode>
+      <FileName>Assets\Script\Interactable\SelectableBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectionManager">
+    <Position X="16.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Interactable\SelectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartGameButton">
+    <Position X="18.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StartGameButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThirdTerminal">
+    <Position X="20.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAABEAoBCgoAAAAQAAQAABACAIQAAEEA=</HashCode>
+      <FileName>Assets\Script\ThirdTerminal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ticket" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIAAgAAAAAAAAAAIAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Script\Interactable\obj\Ticket.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowMenu">
+    <Position X="22" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAABAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Menu\WindowMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Сutscenes">
+    <Position X="23.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAhAGAAAAAAIAAAAAAAACBABAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Script\Сutscenes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IInteractable">
+    <Position X="16.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Interactable\IInteractable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

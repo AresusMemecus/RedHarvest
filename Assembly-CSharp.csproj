@@ -89,6 +89,7 @@
     <Compile Include="Assets\Script\EyesFollow.cs" />
     <Compile Include="Assets\Script\SecondTerminal.cs" />
     <Compile Include="Assets\Script\FillInTheBlankQuestion.cs" />
+    <Compile Include="Assets\Script\DataBase.cs" />
     <Compile Include="Assets\Script\Inventory\InventoryData.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Dialogue\DialogueManager.cs" />
@@ -103,6 +104,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Script\ClassDiagram1.cd" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -602,6 +604,10 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Assets\Plugins\MySql.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
